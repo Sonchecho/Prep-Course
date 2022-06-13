@@ -90,7 +90,12 @@ function fizzBuzz(numero) { if ((numero/3) % 1 === 0 && (numero/5) % 1=== 0 ) {r
   // De lo contrario, devuelve el numero
 }
 
-function operadoresLogicos(num1, num2, num3) {
+function operadoresLogicos(num1, num2, num3) { if ( num1<0 || num2 < 0 || num3 <0 ) {return 'Hay negativos';}
+else if (num1===0 || num2 ===0 || num3 === 0) {return 'Error' ;}
+else if (( num1 > num2 && num1 > num3 ) > 0 ) { return 'Numero 1 es mayor y positivo';}
+else if  (num3 > num1 && num3>num2 ) { return num3 + 1 ;} 
+else return false ; 
+
   //La función recibe tres números distintos. 
   //Si num1 es mayor a num2 y a num3 y además es positivo, retornar ---> "Número 1 es mayor y positivo"
   //Si alguno de los tres números es negativo, retornar ---> "Hay negativos"
@@ -99,7 +104,10 @@ function operadoresLogicos(num1, num2, num3) {
   //Si no se cumplen ninguna de las condiciones anteriores, retornar false. 
 }
 
-function esPrimo(numero) {
+function esPrimo(numero) { if ( numero===1  || numero===0) {return false;}
+ for( var i = 2 ; i < numero ; i++)
+ { if (numero % i === 0) { return false;}} 
+ return true; 
   // Devuelve "true" si "numero" es primo
   // De lo contrario devuelve "falso"
   // Pista: un número primo solo es divisible por sí mismo y por 1
@@ -107,27 +115,36 @@ function esPrimo(numero) {
   // Nota: Los números 0 y 1 NO son considerados números primos
 }
 
-function esVerdadero(valor){
+function esVerdadero(valor){ if( valor === true ) {return 'verdadero';}
+else return 'soy falso'; 
   //Escribe una función que reciba un valor booleano y retorne “Soy verdadero” 
   //si su valor es true y “Soy falso” si su valor es false.
   //Escribe tu código aquí
 
 }
 
-function tablaDelSeis(){
+function tablaDelSeis() { var tabla6 = [] 
+ for ( var i = 0 ; i <=10 ; i++ )
+    { tabla6.push(i*6) } {return tabla6}
   //Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
   //La función devuelve un array con los resultados de la tabla de multiplicar del 6 en orden creciente.
   //Escribe tu código aquí   
   
 }
 
-function tieneTresDigitos(numero){
+function tieneTresDigitos(numero){ if ( numero>99 && numero <1000){ return true;}
+else return false ; 
   //Leer un número entero y retornar true si tiene 3 dígitos. Caso contrario, retorna false.
   //Escribe tu código aquí
   
 }
 
-function doWhile(numero) {
+function doWhile(numero) { var j = numero ;; var i = 0 ;  
+  do { 
+    i=i+1 ;
+    j=j+5 ;
+  }
+  while ( i < 8 ) ; { return j} ; 
   //Implementar una función tal que vaya aumentando el valor recibido en 5 hasta un límite de 8 veces
   //Retornar el valor final.
   //Usar el bucle do ... while.
